@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define max 3
+typedef struct stack{
+    int *n;
+    int top;
+}stack;
+void push(stack *s){
+    printf("Enter the element:");
+    scanf("%d",&s->n[++s->top]);
+    printf("\nITEM inserted successfully.\n");
+}
+void sum(stack *s){
+    int i,sum=0;
+    if (s->top >= 0){
+        printf("\nThe Element Stack:\n");
+        for(i =s->top;i>=0;i--){
+            printf("\n%d",s->n[i]);
+            sum = sum + s->n[i];
+        }
+    printf("Sum of elements in stack are:%d ",sum);    
+    }
+}
+int main() {
+    stack s1;
+    s1.top = -1;
+    s1.n = (int*)malloc(sizeof(int)* max);
+    push(&s1);
+    push(&s1);
+    sum(&s1);
+    return 0;
+}
+

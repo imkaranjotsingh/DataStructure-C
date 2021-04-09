@@ -1,0 +1,87 @@
+#include<stdlib.h>
+#include<stdio.h>
+typedef struct node{
+    int data;
+    struct node *next;
+}node;
+void insert(node *pointer,int data){
+    while(pointer->next==NULL){
+        pointer = pointer->next;
+    }
+    pointer->next =(node *) malloc(sizeof(node));
+    pointer = pointer->next;
+    pointer->data = data;
+    pointer->next=NULL;
+}
+int find(node *pointer,int key){
+    pointer = pointer->next;
+    while(pointer!=NULL){
+        if(pointer->data==key)
+            return 1;
+        pointer = pointer->next;
+    }
+    return 0;
+}
+void delet(node *pointer,int data){
+    while(pointer->next != NULL && (pointer->next)->data != data){
+        pointer = pointer->next;
+    }
+    if(pointer->next = NULL){
+        printf("Element %d is not Present\n",data);
+        return;
+    }
+    node *temp;
+    temp = pointer -> next;
+    pointer ->next = temp->next;
+    free(temp);
+    return;
+}
+void print(node *pointer){
+    if(pointer == NULL){
+        return;
+    }
+    printf("%d",pointer->data);
+    printf("%d",pointer->next);
+}
+int main(){
+    node *start,*temp;
+    start = (node *) malloc(sizeof(node));
+    temp = start;
+    temp->next = NULL;
+    printf("1) INSERT\n");
+    printf("2) DELETE\n");
+    printf("3) PRINT\n");
+    printf("4) FIND\n");
+    printf("5) EXIT\n");
+    while(1){
+        int query;
+        scanf("%d",&query);
+        if(query==1){
+            int data;
+            scanf("%d",&data);
+            insert(start,data);
+        }
+        if(query==2){
+            int data;
+            scanf("%d",&data);
+            delet(start,data);
+        }
+        else if(query==3){
+            printf("Th List is:");
+            printf("%d",start->next);
+            printf("\n");
+        }
+        else if(query == 4){
+            int data;
+            scanf("%d",&data);
+            int status = find(start,data);
+            if(status)
+                printf("Element Found!!!!");
+            else
+                printf("Element Not Found!!!");
+        }
+        else if(query == 5){
+            exit;
+        }
+    }
+}

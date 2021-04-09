@@ -1,0 +1,68 @@
+//wap to Rev a string using Recursion..
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void retrn(int i,char s[10]){
+	if(i){
+		printf("%c",s[i-1]);
+		retrn(i-1,s);
+	}
+}
+int main(){
+	char s[10] ="Hello";
+	int a;
+	puts(s);
+	while(s[a] != '\0'){
+		a++;
+	}
+	printf("%d\n",a);
+	retrn(a,s);
+	return 0;
+}
+----------------------------------------
+//Wap to find No of accurence of each Element in Array
+#include<stdio.h>
+#include<conio.h>
+int main(){
+	int ar[10] = {1,3,2,1,5,4,7,6,8,7};
+	int i,j,count=0;
+	for(i = 0; i<10; i++){
+		printf("%d\t",ar[i]);
+	}
+	for(i=0; i<10; i++){
+		for(j=0; j<10; j++){
+			if(ar[i] == ar[j])
+				count++;
+		}
+		printf("\n%d No Accured %d Times.\n",ar[i],count);
+		count = 0;
+	}
+	return 0;	
+}
+-----------------------------------------
+// Wap to find accurance of each letter in a Char array
+#include<stdio.h>
+#include<conio.h>
+int main(){
+	int count=0;
+	char ar[20]="Hello How Are You";
+	for(int i=0;i<17;i++){
+		printf("%c",ar[i]);
+	}
+	int space = 0; 
+    for (int i = 0; ar[i]; i++){
+        if (ar[i] != ' ') 
+            ar[space++] = ar[i]; 
+    }
+    ar[space] = '\0'; 
+	for(int i = 0; i<14;i++){
+		for(int j = 0; j<14; j++){
+				if(ar[i] == ar[j]){
+					count++;
+			}
+		}
+		printf("\n%c Accurs %d times.\n",ar[i],count);
+		count = 0;
+	}	
+	return 0;
+}

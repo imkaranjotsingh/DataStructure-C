@@ -1,0 +1,131 @@
+
+
+-----------------------------------
+2d String [ It is a collection of string or names]
+int main()
+{
+char names[6][30]={ "Raman Singh",
+                    "Amit Kumar",
+                    "anil rana",
+                    "raj yadav",
+                    "kk sharma"};
+
+
+printf("%c",names[0][7]);s
+printf("%c",names[2][1]);n
+getch();
+}
+
+-------------------------------
+int main()
+{
+int i,j;
+for(i=0;i<5;i++)
+{
+ for(j=0;names[i][j]!='\0';j++)
+ {
+  printf("%c",names[i][j]);//rajesh   rakesh ramesh
+ }
+}
+getch();
+}
+-------------------------------
+W.A.P to input 5 names print the reverse of each
+name.
+
+int i,j;
+char names[5][20];
+for(i=0;i<5;i++)
+{
+ printf("Enter a name");
+ gets(names[i]); ram sham
+}
+for(i=0;i<5;i++)ram  
+{
+ for(j=0;names[i][j]!='\0';j++)
+  {
+   }
+ for(;j>=0;j--)
+ {
+ printf("%c",names[i][j]);mar
+ }
+printf("\n");
+}
+----------------------------
+W.A.P to input 5 names convert each name in uppercase
+char names[5][20];
+for(i=0;i<5;i++)
+{
+ printf("Enter a name");
+ gets(names[i]);
+}
+for(i=0;i<5;i++)
+{
+ for(j=0;names[i][j]!='\0';j++)
+  {
+  if(names[i][j]>=65 && names[i][j]<=90)
+    names[i][j]+=32;
+   }
+}
+for(i=0;i<5;i++)
+ {
+  puts(names[i]);
+ }
+----------------------------------------
+W.A.P to input 5 names print the surname first.
+char names[5][20];
+for(i=0;i<5;i++)
+{
+ printf("Enter a name");
+ gets(names[i]);
+}
+for(i=0;i<5;i++)
+{
+ for(j=0;names[i][j]!=' ';j++)
+  {
+   }
+ for(;names[i][j]!='\0';j++)
+  {
+   printf("%c",names[i][j]);
+   }
+ for(j=0;names[i][j]!=' ';j++)
+ {
+  printf("%c",names[i][j]);
+ }
+printf("\n");
+}
+-------------------------------------
+raman kumar aggarwal
+sunil sharma goyal
+
+aggarwal raman kumar
+goyal sunil sharma
+
+------------------------------------
+char names[5][20];
+for(i=0;i<5;i++)
+{
+ printf("Enter a name");
+ gets(names[i]);
+}
+for(i=0;i<5;i++)
+{
+ for(j=0;names[i][j]!=' ';j++)
+  {
+   }
+  for(j=0;names[i][j]!=' ';j++)
+  {
+   }
+  for(;names[i][j]!='\0';j++)
+  {
+    printf("%c",names[i][j]);
+   }
+   for(j=0;names[i][j]!=' ';j++)
+ {  
+ }
+for(j=0;names[i][j]!=' ';j++)
+  {printf("%c",names[i][j]);
+   }
+printf("\n");
+}
+
